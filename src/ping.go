@@ -3,7 +3,14 @@
 // @Description this is a simple CLI program that pings 
 //              a given address. We are using a library
 //              called go-ping by @Author sparrc
-//              (https://github.com/sparrc/go-ping)
+//              (https://github.com/sparrc/go-ping). 
+//              This library has a bunch of support
+//              for ICMP requests like IPv4 and IPv6.
+//              One things I wasn't able to achieve was
+//              setting the TTL as it's determined within
+//              the Run function and you can't send your
+//              desired Packet. You are able to set the
+//              size though.
 package main
 
 import (
