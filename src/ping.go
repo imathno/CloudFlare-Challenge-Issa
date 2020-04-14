@@ -31,7 +31,7 @@ func main() {
         if (!is_valid_addr(addr)) {
                 panic("The Address is invalid")
         }
-        
+
         ping_addr(addr)
         os.Exit(0)
 }
@@ -62,7 +62,7 @@ func is_valid_addr(addr string) bool {
 func ping_addr(addr string) {
         pinger, err := ping.NewPinger(addr)
         pinger.SetPrivileged(true) // Send "privelaged" raw ICMP pings. It mostly won't work without this
-        pinger.Size = 24 // Mimicks the 32 bytes that is like the CMD for windows.
+        pinger.Size = 24 // Mimicks the 32 bytes that is in the windows Ping CLI
 
         if err != nil {
                 panic(err)
